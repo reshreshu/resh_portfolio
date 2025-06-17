@@ -1,4 +1,12 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist"
-} 
+  "builds": [
+    {
+      "src": "vite.config.js",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "_comment": "Trigger clean build"
+}
